@@ -9,13 +9,15 @@ public class suanshi {
     {
         int a;
         int b;
-        int j;
+        int c;
+        int j=0;
         for(int i = 0;i < 50;i ++) {
             a = (int)(Math.random()*101);
             b = (int)(Math.random()*101);
+            c = (int)(Math.random()+0.5);
             s[i][0] = String.valueOf(a);
             s[i][2] = String.valueOf(b);
-            if(i<25) {
+            if(c==0) {
                 s[i][1] = "+";
                 out[i] = a+b;
             }
@@ -34,6 +36,9 @@ public class suanshi {
                 }
             }
             if(j!=i) {
+                i--;
+            }
+            if(out[i]<0||out[i]>100){
                 i--;
             }
         }
