@@ -1,16 +1,19 @@
-public class mix_excise extends suanshi{
-    
-    String shizi(){
-        num();
-        int a=(int) (Math.random() * 2);
-        if(a==0) op="-";
-        else op="+";
-        return String.valueOf(lef_num) + op + String.valueOf(right_num);
+public class mix_excise extends suanshi {
+    String equation() {
+        int a;
+        op = "+";
+        left_num = (int) (Math.random() * 100);
+        right_num = (int) (Math.random() * 100);
+        a = (int) (Math.random() * 2);
+        if (a == 1) {
+            op = "-";
+        }
+        return (left_num) + op + (right_num);
     }
-    int out(){
-        if(op=="+")
-        value=lef_num+right_num;
-        else value=lef_num-right_num;
+
+    int out() {
+        if (op == "-") value = left_num - right_num;
+        if (op == "+") value = left_num + right_num;
         return value;
     }
 }

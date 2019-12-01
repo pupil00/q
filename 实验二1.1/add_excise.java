@@ -1,11 +1,13 @@
-public class add_excise extends suanshi{
-    String op="+";
-    String shizi(){
-        num();
-        return String.valueOf(lef_num) + op + String.valueOf(right_num);
+public class add_excise extends suanshi {
+    String equation() {
+        op = "+";
+        left_num = (int) (Math.random() * 100);
+        right_num = (int) (Math.random() * 100);
+        return (left_num) + op + (right_num);
     }
-    int out(){
-        value=lef_num+right_num;
+
+    int out() {
+        value = left_num + right_num;
         return value;
     }
 }
